@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block contents %}
+
+<br>
+<form class="form-inline my-2 my-lg-0" style="justify-content: center;">
+    <input class="form-control mr-sm-2" style="width: 400px;" type="search" placeholder="해시태그를 검색해보세요!"
+        aria-label="Search">
+    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+</form>
+<hr>
+
+
+<ul class="sample-cards" style="display: flex; flex-wrap: wrap;">
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+
+    <!-- Cards -->
+
+    <li class="card promoting-card" style="height: 300px; width: 300px;">
+    <div class="card-body d-flex flex-row">
+      <!-- Content -->
+      <div>
+        <!-- Title -->
+        <h4 class="card-title font-weight-bold mb-2"><a href = "{% url 'traveler_detail' %}">정식집</a></h4>
+
+      </div>
+    </div>
+      <!-- Card image -->
+      <div class="view overlay">
+        <img class="card-img-top rounded-0" src="{% static 'travel/img/jongsik.jpeg' %}" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      
+      <!-- Card content -->
+      <div class="card-body">
+    
+        <div class="collapse-content">
+
+          <p class="card-text collapse" id="collapseContent">동작구 흑석동</p>
+
+          <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+          <i class="fas fa-share-alt text-muted float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+          <i class="fas fa-heart text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+    
+        </div>
+    
+      </div>
+    </li>
+
+    </div>
+    <!-- Card -->
+
+
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+  </ul>
+
+
+
+
+
+{% endblock %}
+
