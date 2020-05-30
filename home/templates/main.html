@@ -16,13 +16,13 @@
         <img src="{% static 'home/img/바다.jpg' %}" class="rounded" alt="ocean" width="950px" height="450px">
         <div class="text-center" style=" position: absolute; top: 100px; left: 400px; ">
             <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" width="300px" height="300px" style="opacity: 0.5;">
-            <a class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:40px; left: 80px; color: black;"> 
+            <a class="navbar-brand mb-0 h1" href="{% url 'traveler_main' %}" style="position: absolute; top:40px; left: 80px; color: black;"> 
                 <div style="color: black; ">
                     <h1><B>Traveler</B></h1>
                 </div>  
                 <br>
             </a>
-            <div class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:120px; left: 30px; color: black;"> 
+            <div class="navbar-brand mb-0 h1" href="{% url 'traveler_main' %}" style="position: absolute; top:120px; left: 30px; color: black;"> 
                 <div style="color: black; font-size: 15px; ">
                     다양한가이드들에게<br>
                     가고자 하는 동네를 소개받아보세요!
@@ -30,26 +30,26 @@
                 <br>
             </div>
             <div class="button" style="position: absolute; top:220px; left: 100px; color: black;">
-                <a href='#'><button class="btn btn-outline-dark my-2 my-sm-0">See More</button></a>
+                <a href="{% url 'traveler_main' %}"><button class="btn btn-outline-dark my-2 my-sm-0">See More</button></a>
             </div>
         </div>
 
         <div class="text-center" style=" position: absolute; top: 100px; left: 820px; ">
             <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" width="300px" height="300px" style="opacity: 0.5;">
-            <a class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:40px; left: 90px; color: black;"> 
+            <a class="navbar-brand mb-0 h1" href="{% url 'guide_new' %}" style="position: absolute; top:40px; left: 90px; color: black;"> 
                 <div style="color: black; ">
                     <h1><B>Guide</B></h1>
                 </div>  
                 <br>
             </a>
-            <div class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:140px; left: 55px; color: black;"> 
+            <div class="navbar-brand mb-0 h1" href="" style="position: absolute; top:140px; left: 55px; color: black;"> 
                 <div style="color: black; font-size: 15px; ">
                     자신의 동네를 소개해주세요!
                 </div>
                 <br>
             </div>
             <div class="button" style="position: absolute; top:220px; left: 90px; color: black;">
-                <a href='#'><button class="btn btn-outline-dark my-2 my-sm-0">Create Guide</button></a>
+                <a href="{% url 'guide_new' %}"><button class="btn btn-outline-dark my-2 my-sm-0">Create Guide</button></a>
             </div>
         </div>
     </div>

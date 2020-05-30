@@ -36,14 +36,14 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'traveler_main' %}">
                 <div style="margin-right: 50px">
                     <B>Traveler</B>
                 </div>
             </a>
         </li>
         <li class="nav-item">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'guide_new' %}">
                 <div style="margin-right: 50px">
                     <B>Guide</B>
                 </div>
@@ -55,7 +55,7 @@
                 <b>Mypage</b>
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">내정보 수정</a>
+                <a class="dropdown-item" href="{% url 'mypage' %}">내정보 수정</a>
         
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
@@ -72,14 +72,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'traveler_main' %}">
                     <div style="margin-right: 50px">
                         <B>Traveler</B>
                     </div>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'guide_new' %}">
                     <div style="margin-right: 50px">
                         <B>Guide</B>
                     </div>
