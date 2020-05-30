@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contents %}
+
+  <!-- title -->
+  <div class="alert alert-light" role="alert">
+    흑석동 Guide
+  </div>
+
+
+  <div style="display:flex; flex-direction: row;">
+  <!-- Nav-vertical -->
+  <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">흑석동</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">노량진</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">상도동</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+
+    <ul class="sample-cards" style="display: flex; flex-wrap: wrap;">
+      <li class="card" src="{% static 'travel/img/sik.jpg' %}" style="width:200px;height:200px;margin:30px;">
+        <a href = "{% url 'traveler_detail' %}">정식집</a>
+      </li>
+
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+      <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+
+    </ul>
+  </div>
+
+    
+    {% endblock %}
+
