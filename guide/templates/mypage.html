@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block navbar %}
+<li class="nav-item dropdown">
+  <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      <b>Mypage</b>
+  </a>
+  <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">내정보 수정</a>
+      <a class="dropdown-item" href="#">게시글 관리</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Logout</a>
+  </div>
+</li>
+{% endblock %}
+
+{% block contents %}
+<span class="badge badge-pill badge-dark"><h4> 내 정보 </h4></span> <br><br>
+<span class="badge badge-pill badge-dark"><h4> 내가 작성한 글 </h4></span>
+<br><br>
+
+{% for blog in blogs.all %}
+<a href="{% url 'guide_detail' blog.id %}"><div class= "container">
+
+  <ul class="sample-cards" style="display: flex; flex-wrap: wrap;">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{blog.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{blog.tag}}</li>
+        </ul>
+      </div>
+
+      </li>
+
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+    <li class="card" style="width:200px;height:200px;margin:30px;">abc</li>
+  </ul>
+</div>
+
+</div></a>
+</ul>
+<br><hr>
+{% endfor %}
+
+{% endblock %}
