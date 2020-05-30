@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block navbar %}
+<li class="nav-item">
+    <a class="navbar-brand" href="#">
+        <div class="input-group-append">
+            <div style="margin-right: 20px; color: wheat;" >
+                <B>Sign In</B>
+            
+            </div>
+            <b style="color: wheat;">/</b>
+        </div>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="navbar-brand" href="#">
+        <div style="margin-right: 20px; color: wheat;" >
+            <B>Sign Up</B>
+        </div>
+    </a>
+</li>
+
+{% endblock %}
+
+{% block contents %}
+<br>
+<div style="text-align: center; font-size: 50px;"><b>Share Guide</b></div>
+<div style="text-align: center; font-size: 20px; color: darkslategrey;">- Share and Guide the information of my hometown places to foreigners and others -</div>
+
+<div style="position: relative;">
+
+    <div class="text-center" style="margin-top: 50px;">
+        <img src="{% static 'home/img/바다.jpg' %}" class="rounded" alt="ocean" width="950px" height="450px">
+    </div>
+    <div class="text-center" style=" position: absolute;">
+        <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" style="top: 50px; left: 50px;" >
+    </div>
+
+
+</div>
+
+
+{% endblock %}
