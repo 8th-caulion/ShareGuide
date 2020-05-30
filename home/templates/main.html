@@ -3,41 +3,57 @@
 {% load static %}
 
 
-{% block navbar %}
-<li class="nav-item">
-    <a class="navbar-brand" href="#">
-        <div class="input-group-append">
-            <div style="margin-right: 20px; color: wheat;" >
-                <B>Sign In</B>
-            
-            </div>
-            <b style="color: wheat;">/</b>
-        </div>
-    </a>
-</li>
-<li class="nav-item">
-    <a class="navbar-brand" href="#">
-        <div style="margin-right: 20px; color: wheat;" >
-            <B>Sign Up</B>
-        </div>
-    </a>
-</li>
-
-{% endblock %}
-
 {% block contents %}
+
+
 <br>
 <div style="text-align: center; font-size: 50px;"><b>Share Guide</b></div>
 <div style="text-align: center; font-size: 20px; color: darkslategrey;">- Share and Guide the information of my hometown places to foreigners and others -</div>
 
 <div style="position: relative;">
 
-    <div class="text-center" style="margin-top: 50px;">
+    <div class="text-center" style="margin-top: 50px; position: relative;">
         <img src="{% static 'home/img/바다.jpg' %}" class="rounded" alt="ocean" width="950px" height="450px">
+        <div class="text-center" style=" position: absolute; top: 100px; left: 400px; ">
+            <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" width="300px" height="300px" style="opacity: 0.5;">
+            <a class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:40px; left: 80px; color: black;"> 
+                <div style="color: black; ">
+                    <h1><B>Traveler</B></h1>
+                </div>  
+                <br>
+            </a>
+            <div class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:120px; left: 30px; color: black;"> 
+                <div style="color: black; font-size: 15px; ">
+                    다양한가이드들에게<br>
+                    가고자 하는 동네를 소개받아보세요!
+                </div>
+                <br>
+            </div>
+            <div class="button" style="position: absolute; top:220px; left: 100px; color: black;">
+                <a href='#'><button class="btn btn-outline-dark my-2 my-sm-0">See More</button></a>
+            </div>
+        </div>
+
+        <div class="text-center" style=" position: absolute; top: 100px; left: 820px; ">
+            <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" width="300px" height="300px" style="opacity: 0.5;">
+            <a class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:40px; left: 90px; color: black;"> 
+                <div style="color: black; ">
+                    <h1><B>Guide</B></h1>
+                </div>  
+                <br>
+            </a>
+            <div class="navbar-brand mb-0 h1" href="#" style="position: absolute; top:140px; left: 55px; color: black;"> 
+                <div style="color: black; font-size: 15px; ">
+                    자신의 동네를 소개해주세요!
+                </div>
+                <br>
+            </div>
+            <div class="button" style="position: absolute; top:220px; left: 90px; color: black;">
+                <a href='#'><button class="btn btn-outline-dark my-2 my-sm-0">Create Guide</button></a>
+            </div>
+        </div>
     </div>
-    <div class="text-center" style=" position: absolute;">
-        <img src="{% static 'home/img/흰색.jpg' %}" class="rounded" alt="ocean" style="top: 50px; left: 50px;" >
-    </div>
+
 
 
 </div>

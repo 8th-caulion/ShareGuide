@@ -3,44 +3,38 @@
 {% load static %}
 
 
-{% block contents %}
-<section class="form-elegant">
 
-    <!--Form without header-->
-    <div class="card">
-  
-      <div class="card-body mx-4">
-  
-        <!--Header-->
-        <div class="text-center">
-          <h3 class="dark-grey-text mb-5"><strong>Sign In</strong></h3>
-        </div>
-  
-        <!--Body-->
-        <div class="md-form">
-          <input type="text" id="Form-email1" class="form-control">
-          <label for="Form-email1">Your ID</label>
-        </div>
-  
-        <div class="md-form pb-3">
-          <input type="password" id="Form-pass1" class="form-control">
-          <label for="Form-pass1">Your Password</label>
-        </div>
-  
-        <div class="text-center mb-3">
-          <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
-        </div>
-        
+{% block contents %}
+
+<div class="container">
+
+  <form action="{% url 'signin' %}" method="POST">
+    {% csrf_token %}
+    <div style="text-align: center; font-size: 50px; margin-top: 100px;"><b>Log In</b></div>
+    <hr>
+    <!-- Material input -->
+
+    <div style="text-align: center;">
+
+
+      <div style="width: 300px;">
+        <input name="username" class="form-control" type="text" placeholder="Input Your ID" style="margin-left: 400px;">
       </div>
-  
-      <!--Footer-->
-      <div class="modal-footer mx-5 pt-3 mb-1">
-        <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#"
-            class="blue-text ml-1"> Sign Up</a></p>
+      <br />
+
+      <div style="width: 300px;">
+        <input name="password" class="form-control" type="password" placeholder="Input Your PassWord"
+          style="margin-left: 400px;">
       </div>
-  
+
+
+      <hr>
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="signin">Log In</button>
+ 
     </div>
-    <!--/Form without header-->
-  
-  </section>
+
+  </form>
+  {{error}}
+</div>
+
 {% endblock %}
