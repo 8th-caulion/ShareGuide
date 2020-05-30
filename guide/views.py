@@ -40,3 +40,5 @@ def guide_uplode(request, pk):
     blog.save()
     return redirect('mypage')
 
+
+
