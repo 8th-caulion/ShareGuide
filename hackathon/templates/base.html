@@ -25,11 +25,11 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
 
-
+    {% if user.is_authenticated %}
     <!-- Navbar -->
     <ul class="nav justify-content-center navbar-dark" style="background-color: black;">
         <li class="nav-item">
-            <a class="navbar-brand mb-0 h1" href="#">
+            <a class="navbar-brand mb-0 h1" href="{% url 'main' %}">
                 <div style="margin-right: 50px">
                     <B>Share Guide</B>
                 </div>
@@ -49,11 +49,63 @@
                 </div>
             </a>
         </li>
-        {% block navbar %}
-        {% endblock %}
+        <li class="nav-item dropdown">
+            <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <b>Mypage</b>
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">내정보 수정</a>
         
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </li>
+    </ul>
+        {% else %}
+        <ul class="nav justify-content-center navbar-dark" style="background-color: black;">
+            <li class="nav-item">
+                <a class="navbar-brand mb-0 h1" href="{% url 'main' %}">
+                    <div style="margin-right: 50px">
+                        <B>Share Guide</B>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="#">
+                    <div style="margin-right: 50px">
+                        <B>Traveler</B>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="#">
+                    <div style="margin-right: 50px">
+                        <B>Guide</B>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">   
+                <a class="navbar-brand" href="{% url 'signin' %}">
+                    <div class="input-group-append">
+                        <div style="margin-right: 20px; color: wheat;" >
+                            <B>Sign In</B>
+                        
+                        </div>
+                        <b style="color: wheat;">/</b>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="{% url 'signup' %}">
+                    <div style="margin-right: 20px; color: wheat;" >
+                        <B>Sign Up</B>
+                    </div>
+                </a>
+            </li>
        
     </ul>
+    {% endif %}
 </head>
 
 
